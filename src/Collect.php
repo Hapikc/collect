@@ -116,9 +116,9 @@ class Collect
         return $this;
     }
 
-    public function splice($idx, $length = 1): Collect
+    public function splice(int $offset, int $length = 1, array $replacement = []): Collect
     {
-        array_splice($idx, $length);
+        array_splice($this->array, $offset, $length, $replacement);
         return $this;
     }
 }
